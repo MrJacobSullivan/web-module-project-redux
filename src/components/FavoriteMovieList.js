@@ -24,4 +24,4 @@ const FavoriteMovieList = (props) => {
 
 const mapStateToProps = (state) => ({ favorites: state.favorites.favorites })
 
-export default connect()(FavoriteMovieList)
+export default connect(mapStateToProps)(FavoriteMovieList)

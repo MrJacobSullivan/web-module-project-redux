@@ -4,9 +4,9 @@ const ACTIONS = {
 }
 
 const deleteFavorite = (id) => {
-  return { type: ACTIONS.DELETE_MOVIE, payload: id }
+  return { type: ACTIONS.DELETE_FAVORITE, payload: id }
 }
 
-const addFavorite = (newFavorite) => ({ type: ACTIONS.ADD_MOVIE, payload: { ...newFavorite } })
+const addFavorite = (newFavorite) => ({ type: ACTIONS.ADD_FAVORITE, payload: { ...newFavorite } })
 
 export { ACTIONS, addFavorite, deleteFavorite }
