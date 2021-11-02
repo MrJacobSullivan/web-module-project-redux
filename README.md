@@ -33,7 +33,7 @@ In this project, you take a fairly complex application used to search a movie da
 
 > _The DOM and movie reducer has been provided for you, but it's up to to connect it to redux..._
 
-- [ ] In index.js, make use of the createStore method and Provider component to link your App to redux.
+- [x] In index.js, make use of the createStore method and Provider component to link your App to redux.
 
 #### Connecting the Movie reducer
 
