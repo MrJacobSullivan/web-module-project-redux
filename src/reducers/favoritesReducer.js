@@ -15,7 +15,14 @@ const reducer = (state = initialState, action) => {
 
     case ACTIONS.DELETE_FAVORITE:
       return {
+        ...state,
         movies: state.favorites.filter((item) => action.payload !== item.id),
+      }
+
+    case ACTIONS.TOGGLE_SHOW_FAVORITES:
+      return {
+        ...state,
+        displayFavorites: !state.displayFavorites,
       }
 
     default:
