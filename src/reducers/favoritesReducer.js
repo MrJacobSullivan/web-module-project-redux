@@ -10,7 +10,9 @@ const reducer = (state = initialState, action) => {
     case ACTIONS.ADD_FAVORITE:
       return {
         ...state,
-        favorites: [...state.favorites, { ...action.payload }],
+        favorites: state.favorites.find((favorite) => favorite.id === action.payload.id)
+          ? state.favorites
+          : [...state.favorites, { ...action.payload }],
       }
 
     case ACTIONS.DELETE_FAVORITE:
