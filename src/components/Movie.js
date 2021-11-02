@@ -71,6 +71,6 @@ const Movie = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({ movies: state.movies })
+const mapStateToProps = (state) => ({ movies: state.movies.movies })
 
 export default connect(mapStateToProps, { deleteMovie })(Movie)

@@ -27,6 +27,6 @@ const MovieHeader = (props) => {
   )
 }
 
-const mapStateToProps = (state) => ({ appTitle: state.appTitle })
+const mapStateToProps = (state) => ({ appTitle: state.movies.appTitle })
 
 export default connect(mapStateToProps)(MovieHeader)
