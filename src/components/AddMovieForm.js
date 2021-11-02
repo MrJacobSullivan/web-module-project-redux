@@ -22,7 +22,19 @@ const AddMovieForm = (props) => {
     })
   }
 
-  const handleSubmit = (e) => {}
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    props.addMovie({
+      title: movie.title,
+      director: movie.director,
+      genre: movie.genre,
+      metascore: movie.metascore,
+      description: movie.description,
+    })
+
+    push('/movies')
+  }
 
   const { title, director, genre, metascore, description } = movie
   return (
@@ -98,4 +110,4 @@ const AddMovieForm = (props) => {
   )
 }
 
-export default AddMovieForm
+export default connect(null, { addMovie })(AddMovieForm)
